@@ -1,4 +1,5 @@
 import axios from "axios";
+import {Toast} from "antd-mobile";
 
 // 项目基地址
 const baseURL = 'http://geek.itheima.net/v1_0/'
@@ -25,6 +26,11 @@ http.interceptors.response.use(function (response) {
     // 返回值拆掉 http 封装的 data 层
     return response;
 }, function (error) {
+    // 请求错误的提示
+    Toast.show({
+        icon: 'fail',
+        content: '网络异常...'
+    })
     // Any status codes that falls outside the range of 2xx cause this function to trigger
     // Do something with response error
     return Promise.reject(error);
