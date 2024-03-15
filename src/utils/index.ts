@@ -1,6 +1,6 @@
 // 统一导出文件
-import request from './request.ts'
+import http from './http.ts'
 
 export {
-    request
+    http
 }
