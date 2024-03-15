@@ -3,6 +3,7 @@ import { Tabs } from 'antd-mobile'
 // 引入样式
 import './index.scss'
 import useTab from "@/hook/useTab.ts";
+import DataList from "@/pages/Home/DataList";
 
 const Home = () => {
     // 使用标签页钩子
@@ -20,16 +21,14 @@ const Home = () => {
                             {
                                 articleChannelList.map(channel => (
                                     <Tabs.Tab title={channel.name} key={channel.id}>
-                                        {channel.id}
+                                        {/* 数据列表 */}
+                                        <DataList channelId={"" + channel.id} />
                                     </Tabs.Tab>
                                 ))
                             }
                         </Tabs>
                     }
                 </nav>
-            </div>
-            <div className="list-container">
-
             </div>
         </div>
     )
