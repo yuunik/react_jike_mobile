@@ -30,6 +30,9 @@ const Home = () => {
                     }
                 </nav>
             </div>
+            <div className="list-container">
+
+            </div>
         </div>
     )
 }
