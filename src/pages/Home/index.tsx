@@ -22,16 +22,15 @@ const Home = () => {
                                 articleChannelList.map(channel => (
                                     <Tabs.Tab title={channel.name} key={channel.id}>
                                         {/* 数据列表 */}
-                                        <DataList channelId={"" + channel.id} />
+                                        <div className="list-container">
+                                            <DataList channelId={"" + channel.id} />
+                                        </div>
                                     </Tabs.Tab>
                                 ))
                             }
                         </Tabs>
                     }
                 </nav>
-            </div>
-            <div className="list-container">
-
             </div>
         </div>
     )
