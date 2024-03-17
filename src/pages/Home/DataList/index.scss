@@ -1,0 +1,12 @@
+.detail {
+
+  &>div:last-child {
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px black;
+    margin: 0 10px;
+    height: calc(100vh - 45px);
+    font: bold 20px "幼圆",sans-serif;
+  }
+}

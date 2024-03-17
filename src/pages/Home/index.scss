@@ -5,13 +5,23 @@
     height: 50px;
     top: 0;
     left: 0;
-  }
 
-  .list-container {
-    position: fixed;
-    top: 50px;
-    bottom: 0;
-    width: 100%;
-    overflow: auto;
+    .adm-tabs-header {
+      height: 50px;
+      display: flex;
+      justify-content: center;
+    }
+
+
+
+
+
+    .list-container {
+      position: fixed;
+      top: 50px;
+      bottom: 0;
+      width: 100%;
+      overflow: auto;
+    }
   }
 }

@@ -1,7 +1,9 @@
-import {Image, InfiniteScroll, List} from 'antd-mobile'
+import { Image, InfiniteScroll, List } from 'antd-mobile'
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { getArticleListByIdAPI } from "@/apis/article.ts";
 import { ArticleItem } from "@/types/article";
+import './index.scss'
 
 interface Props {
     channelId: string
@@ -50,6 +52,8 @@ const DataList = ({ channelId }: Props) => {
         }
     }
 
+    const navigate = useNavigate()
+
     return (
         <>
             <List>
@@ -67,6 +71,7 @@ const DataList = ({ channelId }: Props) => {
                                 />
                             }
                             description={article.pubdate}
+                            onClick={ () => navigate(`/detail?id=${article.art_id}`) }
                         >
                             {article.title}
                         </List.Item>

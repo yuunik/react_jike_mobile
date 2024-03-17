@@ -43,3 +43,20 @@ export type CoverItem = {
     // 文章封面图片地址数组
     images?: string[]
 }
+
+// 文章详情类型
+export type ArticleInfo = {
+    art_id: string, // 文章id
+    title: string, // 文章标题
+    pubdate: string, // 文章发布时间
+    aut_id: string, // 文章作者id
+    content: string, // 文章内容
+    aut_name: string, // 文章作者名
+    aut_photo: string, // 文章作者头像
+    is_followed: boolean, // 文章作者-是否被关注
+    is_collected: boolean, // 文章-是否被收藏
+    attitude: number, // 文章-是否被点赞
+    comm_count: number, // 文章_评论总数
+    read_count: number, // 文章_阅读总数
+    like_count: number // 文章_点赞总数
+}

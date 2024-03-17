@@ -17,7 +17,7 @@ const Home = () => {
                     {
                         articleChannelList
                         &&
-                        <Tabs className="list">
+                        <Tabs className="list" defaultActiveKey={"0"}>
                             {
                                 articleChannelList.map(channel => (
                                     <Tabs.Tab title={channel.name} key={channel.id}>

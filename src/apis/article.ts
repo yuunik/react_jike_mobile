@@ -2,7 +2,7 @@
 import { http } from '@/utils'
 import type { ResType } from '@/types/basic'
 import type { ChannelRes } from '@/types/channel'
-import {ArticleListQuery, ArticleListRes} from "@/types/article";
+import {ArticleInfo, ArticleListQuery, ArticleListRes} from "@/types/article";
 
 // 获取文章频道
 export const getArticleChannelListAPI = () => {
@@ -21,5 +21,13 @@ export const getArticleListByIdAPI = (params: ArticleListQuery) => {
         url: '/articles',
         method: 'get',
         params
+    })
+}
+
+// 获取文章详情
+export const getArticleInfoAPI = (article_id: string) => {
+    return http<ResType<ArticleInfo>>({
+        url: `/articles/${article_id}`,
+        method: 'get'
     })
 }
